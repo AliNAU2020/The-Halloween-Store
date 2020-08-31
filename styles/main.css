@@ -1,0 +1,310 @@
+html {
+	background-image: url("../images/bats.gif");
+}
+body  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 95%;
+	max-width: 960px;
+	background-color: white;
+	margin: 0 auto;
+	padding: 0;
+	border: 3px solid black;
+	box-shadow: 0 9px 18px 9px;
+}
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+
+/* Header */
+header {
+    background-image: -webkit-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: -moz-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: -o-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    padding: 15px;
+}
+header img {
+	float: left;
+	padding-right: 15px;
+}
+header h2 {
+	font-size: 230%;
+}
+header h3 {
+	font-size: 125%;
+	padding-bottom: 15px;
+}
+
+/* Navigation menu */
+#nav_menu {
+	clear: left;
+}
+#nav_menu ul {
+	list-style: none;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#nav_menu ul {
+	margin: 0;
+	padding: 0;
+}
+#nav_menu ul li a {
+	text-align: center;
+	display: block;
+	width: 160px;
+	padding: .7em 0;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+}
+#nav_menu ul li a.current {
+	color: orange;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+	background-color: gray;
+}
+
+/* Sidebar */
+aside {
+	float: left;
+	width: 160px;
+	padding: 20px 0;
+}
+#nav_list ul {
+	list-style: none;
+	padding-left: 1.5em;
+}
+#nav_list ul li {
+	width: 110px;
+	margin-bottom: .5em;
+	border: 2px solid black; }
+#nav_list ul li a {
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: orange;
+	padding: .5em 0 .5em .5em;
+	color: black;
+}
+
+/* Section */
+section {
+	width: 580px;
+	float: right;
+	padding: 20px 40px 20px 20px;
+}
+section h1 {
+	font-size: 140%;
+	margin-bottom: .5em;
+}
+section h1:first-letter {
+	font-size: 240%;
+}
+section h2 {
+	font-size: 125%;
+	margin: .8em 0 .5em 0;
+}
+section h3 {
+	font-size: 110%;
+	margin: .8em 0 .5em 0;
+}
+section p {
+	margin-bottom: .5em;
+}
+section a {
+	font-weight: bold;
+	color: orange;
+}
+section a:link, main a:visited {
+    color: orange;
+}
+section a:hover, main a:focus {
+    color: green;
+}
+
+/* Footer */
+footer {
+	clear: both;
+	border-top: 2px solid black;
+	padding: 15px;
+    background-image: -webkit-linear-gradient(45deg, black 0%, orange 25%, white 100%);
+    background-image: -moz-linear-gradient(45deg, black 0%, orange 25%, white 100%);
+    background-image: -o-linear-gradient(45deg, black 0%, orange 25%, white 100%);
+    background-image: linear-gradient(45deg, black 0%, orange 25%, white 100%);
+}
+footer p {
+	font-size: 90%;
+	text-align: center;
+}
+/*hide the mobile menu initially */
+#mobile_menu{
+	display: none;
+}
+
+@media only screen and (max-width: 800px)
+body {
+max-width: 800px;
+font-size: 90%; /* full width of screen */
+margin: 0; /* no margins */
+border: none; /* no border */
+}
+
+@media only screen and (max-width: 767px) {
+#nav_menu {
+display: none;
+}
+body {
+max-width: 800px;
+font-size: 90%; /* full width of screen */
+margin: 0; /* no margins */
+border: none; /* no border */
+}
+header, footer p {
+text-align: center;
+}
+footer p { margin-right: 0; }
+
+header h2 {
+font-size: 1.625em; /* 26 / 16 */
+margin: .4em 0 .25em 0;
+}
+header h3 {
+font-size: 1em; /* base font size */
+margin-left: 1;
+}
+header img {
+float: none;
+}
+section {
+width: 95.9596%; /* 100 - (2 * 2.0202) for padding */
+float: none;
+margin-right: 1%; /* 20 / 990 */
+padding-right:0;
+}
+aside {
+width: 5%; /* 100 - (4 * 2.0202) for padding and*/
+hight: 5%;
+
+
+/*margins */
+float: none;
+margin: 0 2.0202% 2.0202% 2.0202%; /* 20 / 990 */
+}
+}
+#mobile_menu
+{
+	display: none;
+
+}
+/*tablet portrait layout(768px to 959px) */
+@media (max-width: 959px){
+	section h1{
+		font-size:135%;
+		padding:.5em 0 .25em 0;
+		border-bottom:solid #800000 2px;
+		margin:0; /*if you remove this, the margins in normalize.css will be applied*/
+	}
+	section h2{
+		color:#800000;
+		font-size:120%;
+		padding:.5em 0 .25em 0;
+	}
+	aside h2{
+		font-size:120%;
+	}
+}
+/*mobile landscape layout (480px to 767px) */
+@media (max-width: 767px){
+	header img{
+			float: none;
+			padding: 0 3.75%;
+		}
+		.content{
+			display: inline-block;
+    margin-left: 7rem;
+    margin-right: auto;
+		}
+		section{
+			width:65.625%; /* 525/800 * 100 */
+			float:none;
+			padding:0 2.5% 2.5% 2.5%;
+		}
+		aside{
+			float:none;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+			-moz-column-count:2;
+			-webkit-column-count:2;
+			column-count:2;
+		}
+		article img{
+			float:right;
+			margin-left: auto;
+			margin-top: auto;
+			margin-bottom: auto;
+			border: 1px solid black;
+			max-width: 30%;
+			min-width: 150px;
+		}
+		#mobile_menu
+		{
+			display:block;
+			background-color: #800000;
+		}
+
+		#nav_menu{
+			display:none;
+		}
+	}
+	/*mobile portrait layout (479px or less) */
+	@media (max-width: 479px){
+		body{
+			font-size:90%;
+		}
+	}
+
+
+@media only screen and (max-width: 479px) {
+#nav_menu {
+display: none;
+}
+
+header h2 {
+font-size: 1.375em; /* 22 / 16 */
+}
+header h3 {
+font-size: .8125em; /* 13 / 16 */
+}
+p {
+font-size: .875em; /* 14 / 16 */
+}
+section h1, section h2 {
+font-size: 1em; /* base font size */
+}
+aside {
+font-size: .9375em; /* 15 / 16 */
+}
+footer p {
+font-size: .6875em; /* 11 / 16 */
+}
+
+}
